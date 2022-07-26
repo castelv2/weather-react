@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import axios from "axios";
 
-export default function Weather(props) {
+export default function Weather() {
   function handleResponse(response) {
         const [city, setCity] = useState("");
         const [loaded, setLoaded] = useState(false);
@@ -58,4 +58,4 @@ export default function Weather(props) {
         } else {
           return form;
         }
-}
+  }
