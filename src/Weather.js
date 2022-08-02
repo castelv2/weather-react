@@ -15,13 +15,12 @@ export default function Weather(props) {
       coordinates: response.data.coord,
       temperature: response.data.main.temp,
       date: new Date(response.data.dt * 1000),
-      wind: response.data.main.wind.speed,
+      wind: response.data.wind.speed,
       city: response.data.name,
       humidity: response.data.main.humidity,
       icon: response.data.weather[0].icon,
       description: response.data.weather[0].description,
     });
-    // setTemperature(response.data.main.temp);
   }
 
   function handleSubmit(event) {
@@ -37,6 +36,7 @@ export default function Weather(props) {
     const apiKey = "094780c710fa4efd669f0df8c3991927";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
+    console.log("Helloooo");
   }
 
   if (weatherData.ready) {
