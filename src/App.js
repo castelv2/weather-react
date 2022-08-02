@@ -8,7 +8,9 @@ function App() {
         <Weather />
       </header>
       <div>
-        <a href="https://github.com/castelv2/weather-react">Open-source code</a>
+        <a href="https://github.com/castelv2/weather-react" target="_blank">
+          Open-source code
+        </a>
         , by Viviana Castellanos
       </div>
     </div>
